@@ -1,25 +1,23 @@
 package Excel.Excel.DataMining2;
 
 import jxl.write.WritableCellFormat;
+
 import java.io.File;
 
 import java.io.IOException;
 import java.util.Locale;
-import jxl.Cell;
 import jxl.CellView;
 import jxl.Workbook;
 import jxl.WorkbookSettings;
 import jxl.format.UnderlineStyle;
-import jxl.write.Formula;
 import jxl.write.Label;
 import jxl.write.Number;
-import jxl.write.WritableCellFormat;
 import jxl.write.WritableFont;
 import jxl.write.WritableSheet;
 import jxl.write.WritableWorkbook;
 import jxl.write.WriteException;
 import jxl.write.biff.RowsExceededException;
-import java.util.Scanner;
+
 
 
 public class Excel_methods extends data_entries
@@ -99,12 +97,7 @@ public class Excel_methods extends data_entries
 	        number = new Number(column, row, d, times);
 	        sheet.addCell(number);
 	    }
-	    private void addText(WritableSheet sheet, int column, int row, String string) throws RowsExceededException, WriteException
-	    {
-	    	Label text;
-	    	text = new Label(column, row, string, times);
-	    	
-	    }
+
 
 	    private void addLabel(WritableSheet sheet, int column, int row, String s)
 	            throws WriteException, RowsExceededException 
@@ -116,21 +109,21 @@ public class Excel_methods extends data_entries
 	  public void CreateContent(WritableSheet sheet) throws WriteException
 	  {
 		  
-		  data_entries data = new data_entries();
+
 		  for(int i=1; i<2000; i++)
 		  {
-		   addNumber(sheet, 0, i, i + data.getId());
-		   addInts(sheet, 1, i, data.getBranchNumber());
-		   addInts(sheet, 2, i,data.getItemNumber());
-		   addLabel(sheet, 3, i, data.getItemName() );
-		   addLabel(sheet, 4, i, data.getVendor());
-		   addLabel(sheet, 5, i, data.getDescription());
-		   addLabel(sheet, 6, i, data.getLocation());
-		   addDeciamls(sheet, 7, i, data.getCostPerItem());
-		   addInts(sheet, 8, i,data.getStockQuanitiy());
-		   addDeciamls(sheet, 9, i, data.getTocalValue());
-		   addInts(sheet, 10, i, data.getReorderLevel());
-		   addInts(sheet, 11, i, data.getDaysPerReOrder());
+		   addNumber(sheet, 0, i, i + data_entries.getId());
+		   addInts(sheet, 1, i, data_entries.getBranchNumber());
+		   addInts(sheet, 2, i,data_entries.getItemNumber());
+		   addLabel(sheet, 3, i, data_entries.getItemName() );
+		   addLabel(sheet, 4, i, data_entries.getVendor());
+		   addLabel(sheet, 5, i, data_entries.getDescription());
+		   addLabel(sheet, 6, i, data_entries.getLocation());
+		   addDeciamls(sheet, 7, i, data_entries.getCostPerItem());
+		   addInts(sheet, 8, i,data_entries.getStockQuanitiy());
+		   addDeciamls(sheet, 9, i, data_entries.getTocalValue());
+		   addInts(sheet, 10, i, data_entries.getReorderLevel());
+		   addInts(sheet, 11, i, data_entries.getDaysPerReOrder());
 		  }
 
 

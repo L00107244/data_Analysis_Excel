@@ -7,10 +7,13 @@ import jxl.write.WriteException;
 
 public class DataEntryTester 
 {
-	  public static void main(String [] args) throws WriteException, IOException
+	  private static Scanner keyIn;
+	
+
+	public static void main(String [] args) throws WriteException, IOException
 	  {
-		  Scanner keyIn = new Scanner(System.in);
-          int counters =0;
+		  keyIn = new Scanner(System.in);
+         
          
 		  System.out.println("Enter branch Number: ");
 		  int bn1 = keyIn.nextInt();
@@ -57,7 +60,7 @@ public class DataEntryTester
 	      test.setOutputFile("DataEntries.xls");
 	      test.write();
 	      System.out.println("Please check the project files for DataEntries.xls ");
-	      counters++;
+
           }
 	  
 		  
